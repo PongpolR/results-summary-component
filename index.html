@@ -49,7 +49,7 @@
 
     .title-left {
       font-size: 24px;
-      font-weight: 500;
+      font-weight: 700;
       color: hsl(241, 100%, 89%);
       margin-top: 10%;
       margin-bottom: 10%;
@@ -82,7 +82,7 @@
     }
 
     .description {
-      margin: 0 15% 15% 15%;
+      margin: 0 18% 15% 18%;
       font-weight: 500;
       color: hsl(241, 100%, 89%);
     }
@@ -102,6 +102,80 @@
       border-radius: 50%;
       display: inline-block;
     }
+
+    .title-right {
+      margin-top: 10%;
+      margin-left: 2rem;
+      font-size: 24px;
+      font-weight: 700;
+      color: hsl(224, 30%, 27%);
+    }
+
+    .stat {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    .button {
+      padding: 10px;
+      background-color: hsl(224, 30%, 27%);
+      /* margin: 1rem; */
+      border-radius: 30px;
+      color: white;
+      text-align: center;
+      margin-top: 80px;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    .box {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    
+    #reaction {
+      background-color: hsla(0, 100%, 67%, 0.1);
+    }
+
+    #reaction-text {
+      color: hsl(0, 100%, 67%);
+    }
+
+    #memory {
+      background-color: hsla(39, 100%, 56%, 0.1);
+    }
+
+    #verbal {
+      background-color: hsla(166, 100%, 37%, 0.1);
+    }
+
+    #visual {
+      background-color: hsla(234, 85%, 45%, 0.1);
+    }
+
+    .text {
+      display: flex;
+    }
+
+    .text div {
+      padding-right: 5px;
+    }
+
+    .score-text {
+      font-weight: 700;
+      color: hsl(224, 30%, 27%);
+    }
+
+    .full-mark-text {
+      font-weight: 700;
+      color: hsla(224, 30%, 27%, 0.5);
+    }
+  
+
   </style>
 </head>
 
@@ -136,16 +210,41 @@
         Summary
       </div>
       <div class="stat">
-        Reaction 80 / 100
+        <div class="box" id="reaction">
+          <!-- <div>
+            <img src="assets/images/icon-reaction.svg" alt="reaction icon">Reaction
+          </div> -->
+          <div class="text">
+            <div>
+              <img src="assets/images/icon-reaction.svg" alt="reaction icon">
+            </div>
+            <div id="reaction-text">Reaction</div>
+          </div>
+          <!-- <div>
+            <img src="assets/images/icon-reaction.svg" alt="reaction icon">
+          </div>
+          <span>test</span> -->
+          <div>
+            <span class="score-text">80</span>
+            <span class="full-mark-text"> / 100</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="box" id="memory">
+          Memory 92 / 100
+        </div>
       </div>
       <div class="stat">
-        Memory 92 / 100
+        <div class="box" id="verbal">
+          Verbal 61 / 100
+        </div>
       </div>
       <div class="stat">
-        Verbal 61 / 100
-      </div>
-      <div class="stat">
-        Visual 72 / 100
+        <div class="box" id="visual">
+          Visual 72 / 100
+        </div>
       </div>
       <div class="button">
         Continue
