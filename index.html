@@ -1,49 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     body {
-      display:flex;
-      flex-direction:column; justify-content:center;
-      min-height:90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 90vh;
       background-color: hsl(0, 0%, 100%);
     }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
     .card {
+      font-family: 'Hanken Grotesk', sans-serif;
       display: flex;
       margin: auto;
       box-shadow: 0 3px 10px hsl(221, 100%, 96%);
       border-radius: 20px;
     }
+
     .left-side {
       width: 50%;
       text-align: center;
       background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
       border-radius: 20px;
     }
+
     .title-left {
+      font-size: 2vw;
+      font-weight: 500;
+      color: hsl(241, 100%, 89%);
       margin-top: 10%;
       margin-bottom: 10%;
     }
+
     .score {
       margin-top: 20%;
       margin-bottom: 20%;
     }
+
+    #your_score {
+      color: white;
+      font-size: 6vw;
+      font-weight: 800;
+    }
+
+    #full_mark {
+      font-size: 18px;
+      font-weight: 500;
+      color: hsl(241, 100%, 89%);
+    }
+
     .result {
+      color: white;
+      font-size: 3vw;
+      font-weight: 700;
       margin-bottom: 5%;
     }
+
     .description {
       margin: 0 15% 15% 15%;
+      font-weight: 500;
+      color: hsl(241, 100%, 89%);
     }
+
     .right-side {
       width: 50%;
       background-color: hsl(0, 0%, 100%);
@@ -51,6 +92,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="card">
@@ -93,8 +135,9 @@
         Continue
       </div>
     </div>
-    
+
   </div>
-  
+
 </body>
+
 </html>
