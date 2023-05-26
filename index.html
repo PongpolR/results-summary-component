@@ -12,6 +12,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Results summary component</title>
+  <script>
+    fetch('data.json')
+      .then(res=>res.json())
+      .then(data => {
+        var category1 = `${data[0].category}`;
+        var category2 = `${data[1].category}`;
+        var category3 = `${data[2].category}`;
+        var category4 = `${data[3].category}`;
+
+        var score1 = `${data[0].score}`;
+        var score2 = `${data[1].score}`;
+        var score3 = `${data[2].score}`;
+        var score4 = `${data[3].score}`;
+
+        document.getElementById("category1").innerHTML = category1;
+        document.getElementById("category2").innerHTML = category2;
+        document.getElementById("category3").innerHTML = category3;
+        document.getElementById("category4").innerHTML = category4;
+
+        document.getElementById("score1").innerHTML = score1;
+        document.getElementById("score2").innerHTML = score2;
+        document.getElementById("score3").innerHTML = score3;
+        document.getElementById("score4").innerHTML = score4;
+
+      });
+  </script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -139,22 +165,22 @@
       background-color: hsla(0, 100%, 67%, 0.1);
     }
 
-    #reaction-text {
+    .reaction-text {
       font-weight: 700;
       color: hsl(0, 100%, 67%);
     }
 
-    #memory-text {
+    .memory-text {
       font-weight: 700;
       color: hsl(39, 100%, 56%);
     }
 
-    #verbal-text {
+    .verbal-text {
       font-weight: 700;
       color: hsl(166, 100%, 37%);
     }
 
-    #visual-text {
+    .visual-text {
       font-weight: 700;
       color: hsl(234, 85%, 45%);
     }
@@ -194,7 +220,6 @@
 </head>
 
 <body>
-
   <div class="card">
     <div class="left-side">
       <div class="title-left">
@@ -223,17 +248,27 @@
       <div class="title-right">
         Summary
       </div>
-
+    
       <div class="stat">
         <div class="box" id="reaction">
           <div class="text">
-            <div>
-              <img src="assets/images/icon-reaction.svg" alt="reaction icon">
+            <div id="icon1">
+              <script>
+                fetch('data.json')
+                  .then(res=>res.json())
+                  .then(data => {
+                    var icon1 = `${data[0].icon}`;
+        
+                    document.getElementById("icon1").innerHTML = `<img src="${icon1}" alt="reaction icon">`;
+
+                  });
+              </script>
             </div>
-            <div id="reaction-text">Reaction</div>
+            <div class="reaction-text" id="category1">
+            </div>
           </div>
           <div>
-            <span class="score-text">80</span>
+            <span class="score-text" id="score1"></span>
             <span class="full-mark-text"> / 100</span>
           </div>
         </div>
@@ -242,13 +277,22 @@
       <div class="stat">
         <div class="box" id="memory">
           <div class="text">
-            <div>
-              <img src="assets/images/icon-memory.svg" alt="reaction icon">
+            <div id="icon2">
+              <script>
+                fetch('data.json')
+                  .then(res=>res.json())
+                  .then(data => {
+                    var icon2 = `${data[1].icon}`;
+        
+                    document.getElementById("icon2").innerHTML = `<img src="${icon2}" alt="memory icon">`;
+                    
+                  });
+              </script>
             </div>
-            <div id="memory-text">Memory</div>
+            <div class="memory-text" id="category2"></div>
           </div>
           <div>
-            <span class="score-text">92</span>
+            <span class="score-text" id="score2"></span>
             <span class="full-mark-text"> / 100</span>
           </div>
         </div>
@@ -257,13 +301,22 @@
       <div class="stat">
         <div class="box" id="verbal">
           <div class="text">
-            <div>
-              <img src="assets/images/icon-verbal.svg" alt="reaction icon">
+            <div id="icon3">
+              <script>
+                fetch('data.json')
+                  .then(res=>res.json())
+                  .then(data => {
+                    var icon3 = `${data[2].icon}`;
+        
+                    document.getElementById("icon3").innerHTML = `<img src="${icon3}" alt="verbal icon">`;
+                    
+                  });
+              </script>
             </div>
-            <div id="verbal-text">Verbal</div>
+            <div class="verbal-text" id="category3"></div>
           </div>
           <div>
-            <span class="score-text">61</span>
+            <span class="score-text" id="score3"></span>
             <span class="full-mark-text"> / 100</span>
           </div>
         </div>
@@ -272,13 +325,22 @@
       <div class="stat">
         <div class="box" id="visual">
           <div class="text">
-            <div>
-              <img src="assets/images/icon-visual.svg" alt="reaction icon">
+            <div id="icon4">
+              <script>
+                fetch('data.json')
+                  .then(res=>res.json())
+                  .then(data => {
+                    var icon4 = `${data[3].icon}`;
+        
+                    document.getElementById("icon4").innerHTML = `<img src="${icon4}" alt="visual icon">`;
+                    
+                  });
+              </script>
             </div>
-            <div id="visual-text">Visual</div>
+            <div class="visual-text" id="category4"></div>
           </div>
           <div>
-            <span class="score-text">72</span>
+            <span class="score-text" id="score4"></span>
             <span class="full-mark-text"> / 100</span>
           </div>
         </div>
