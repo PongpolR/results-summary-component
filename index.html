@@ -61,7 +61,7 @@
     }
 
     #your_score {
-      margin-top: 30px;
+      margin-top: 2.4rem;
       color: white;
       font-size: 76px;
       font-weight: 800;
@@ -94,8 +94,6 @@
     }
 
     .dot {
-      /* height: 25px;
-      width: 25px; */
       height: 200px;
       width: 200px;
       background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
@@ -106,6 +104,7 @@
     .title-right {
       margin-top: 10%;
       margin-left: 2rem;
+      margin-bottom: 10%;
       font-size: 24px;
       font-weight: 700;
       color: hsl(224, 30%, 27%);
@@ -119,13 +118,12 @@
     }
 
     .button {
-      padding: 10px;
+      padding: 1rem;
       background-color: hsl(224, 30%, 27%);
-      /* margin: 1rem; */
       border-radius: 30px;
       color: white;
       text-align: center;
-      margin-top: 80px;
+      margin-top: 2rem;
       margin-left: 2rem;
       margin-right: 2rem;
     }
@@ -133,7 +131,7 @@
     .box {
       display: flex;
       justify-content: space-between;
-      padding: 10px;
+      padding: 0.9rem;
       border-radius: 10px;
     }
     
@@ -142,7 +140,23 @@
     }
 
     #reaction-text {
+      font-weight: 700;
       color: hsl(0, 100%, 67%);
+    }
+
+    #memory-text {
+      font-weight: 700;
+      color: hsl(39, 100%, 56%);
+    }
+
+    #verbal-text {
+      font-weight: 700;
+      color: hsl(166, 100%, 37%);
+    }
+
+    #visual-text {
+      font-weight: 700;
+      color: hsl(234, 85%, 45%);
     }
 
     #memory {
@@ -162,16 +176,16 @@
     }
 
     .text div {
-      padding-right: 5px;
+      padding-right: 0.8rem;
     }
 
     .score-text {
-      font-weight: 700;
+      font-weight: 800;
       color: hsl(224, 30%, 27%);
     }
 
     .full-mark-text {
-      font-weight: 700;
+      font-weight: 800;
       color: hsla(224, 30%, 27%, 0.5);
     }
   
@@ -209,21 +223,15 @@
       <div class="title-right">
         Summary
       </div>
+
       <div class="stat">
         <div class="box" id="reaction">
-          <!-- <div>
-            <img src="assets/images/icon-reaction.svg" alt="reaction icon">Reaction
-          </div> -->
           <div class="text">
             <div>
               <img src="assets/images/icon-reaction.svg" alt="reaction icon">
             </div>
             <div id="reaction-text">Reaction</div>
           </div>
-          <!-- <div>
-            <img src="assets/images/icon-reaction.svg" alt="reaction icon">
-          </div>
-          <span>test</span> -->
           <div>
             <span class="score-text">80</span>
             <span class="full-mark-text"> / 100</span>
@@ -233,19 +241,49 @@
 
       <div class="stat">
         <div class="box" id="memory">
-          Memory 92 / 100
+          <div class="text">
+            <div>
+              <img src="assets/images/icon-memory.svg" alt="reaction icon">
+            </div>
+            <div id="memory-text">Memory</div>
+          </div>
+          <div>
+            <span class="score-text">92</span>
+            <span class="full-mark-text"> / 100</span>
+          </div>
         </div>
       </div>
+
       <div class="stat">
         <div class="box" id="verbal">
-          Verbal 61 / 100
+          <div class="text">
+            <div>
+              <img src="assets/images/icon-verbal.svg" alt="reaction icon">
+            </div>
+            <div id="verbal-text">Verbal</div>
+          </div>
+          <div>
+            <span class="score-text">61</span>
+            <span class="full-mark-text"> / 100</span>
+          </div>
         </div>
       </div>
+
       <div class="stat">
         <div class="box" id="visual">
-          Visual 72 / 100
+          <div class="text">
+            <div>
+              <img src="assets/images/icon-visual.svg" alt="reaction icon">
+            </div>
+            <div id="visual-text">Visual</div>
+          </div>
+          <div>
+            <span class="score-text">72</span>
+            <span class="full-mark-text"> / 100</span>
+          </div>
         </div>
       </div>
+
       <div class="button">
         Continue
       </div>
